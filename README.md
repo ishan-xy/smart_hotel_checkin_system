@@ -104,7 +104,7 @@ uv run uvicorn services.api.app.main:app --reload --app-dir .
 * Python (FastAPI, OpenCV, dlib)
 * ZMQ (event-driven communication)
 * WebRTC (camera streaming)
-* MongoDB
+* MongoDB 
   
 ---
 ## Smart Lock System
