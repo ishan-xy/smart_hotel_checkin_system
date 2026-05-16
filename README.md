@@ -1,36 +1,65 @@
-# Smart Hotel Lock System
+# Smart Hotel Check-In System
 
-A real-time smart hotel system combining face recognition, QR-based check-in, and hardware-ready access control.
-
----
+A real-time computer vision based hotel check-in and smart room access system using face recognition, QR-based digital keys, and access control.
 
 ## 🌐 UI Preview
 
-👉 https://checkin.ishanx.tech  
+👉 https://checkin.gamchngr.xyz  
+[ ishanx.tech expired 🥀🥀]
 
 > This is **only a UI preview**.  
-> The full system is designed for **local deployment**, as it requires:
-> - Camera access  
-> - MQ server
-> - Low-latency local processing  
+> The full system is designed for **local deployment**
+
+---
+## Working Demo
+
+
+https://github.com/user-attachments/assets/84b73a69-400f-4dbb-9e54-b749404ff9cc
 
 ---
 
+## Smart Lock System
+<img width="1280" height="762" alt="image" src="https://github.com/user-attachments/assets/c49fec4c-b509-4c80-9733-5990f657122b" />
+
+---
+
+## 🏗️ System Architecture Diagram
+<img width="1920" height="1080" alt="SYSTEM ARCHITECTURE AND FLOW" src="https://github.com/user-attachments/assets/30eff8a6-219f-4fb9-87f2-955bd91f80b0" />
+
+---
 ## ⚙️ Features
 
-- Face recognition-based identity detection  
-- QR-based secure check-in (HS256 + signature)  
-- Real-time camera streaming via WebRTC/ZMQ  
-- Event-driven architecture (ZMQ pipeline)  
-- Smart lock interface with visual + audio feedback  
-- Modular microservices-based design  
+* Face recognition based guest identification
+* Automatic room assignment after check-in
+* Secure QR-based temporary room keys
+* Real-time camera streaming using WebRTC
+* Event-driven architecture using ZMQ
+* Smart lock integration with access verification
+* Expiring encrypted QR access tokens
 
----
+## 🛠️ Tech Stack
 
-## 🏗️ Architecture
-<img width="1920" height="1080" alt="SYSTEM ARCHITECTURE AND FLOW" src="https://github.com/user-attachments/assets/30eff8a6-219f-4fb9-87f2-955bd91f80b0" />
----
+Python, FastAPI, OpenCV, dlib, MongoDB, WebRTC, ZeroMQ
 
+
+## 🔄 Flow
+
+The system assumes the hotel already has the guest’s booking and face data.
+
+At the kiosk:
+
+* Camera recognizes the guest
+* Booking details are fetched automatically
+* Guest checks in through the dashboard
+* Room gets assigned automatically
+* A signed and encrypted temporary QR key is generated and emailed
+
+At the room:
+
+* Guest scans the QR code at the door
+* System verifies signature + expiry
+* Door unlocks only if the token is valid
+  
 ## 🚀 Setup
 
 ### 1. Install `uv`
@@ -98,15 +127,3 @@ uv run uvicorn services.api.app.main:app --reload --app-dir .
 ```
 
 ---
-
-## 🧠 Tech Stack
-
-* Python (FastAPI, OpenCV, dlib)
-* ZMQ (event-driven communication)
-* WebRTC (camera streaming)
-* MongoDB 
-  
----
-## Smart Lock System
-<img width="1280" height="762" alt="image" src="https://github.com/user-attachments/assets/c49fec4c-b509-4c80-9733-5990f657122b" />
-
