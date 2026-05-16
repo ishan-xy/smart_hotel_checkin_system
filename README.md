@@ -2,10 +2,10 @@
 
 A real-time computer vision based hotel check-in and smart room access system using face recognition, QR-based digital keys, and access control.
 
-## 🌐 UI Preview
+## UI Preview
 
 👉 https://checkin.gamchngr.xyz  
-[ ishanx.tech expired 🥀🥀]
+[ ishanx.tech expired 💔🥀🥀]
 
 > This is **only a UI preview**.  
 > The full system is designed for **local deployment**
@@ -23,11 +23,11 @@ https://github.com/user-attachments/assets/84b73a69-400f-4dbb-9e54-b749404ff9cc
 
 ---
 
-## 🏗️ System Architecture Diagram
+## System Architecture Diagram
 <img width="1920" height="1080" alt="SYSTEM ARCHITECTURE AND FLOW" src="https://github.com/user-attachments/assets/30eff8a6-219f-4fb9-87f2-955bd91f80b0" />
 
 ---
-## ⚙️ Features
+## Features
 
 * Face recognition based guest identification
 * Automatic room assignment after check-in
@@ -37,12 +37,12 @@ https://github.com/user-attachments/assets/84b73a69-400f-4dbb-9e54-b749404ff9cc
 * Smart lock integration with access verification
 * Expiring encrypted QR access tokens
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 Python, FastAPI, OpenCV, dlib, MongoDB, WebRTC, ZeroMQ
 
 
-## 🔄 Flow
+## Flow
 
 The system assumes the hotel already has the guest’s booking and face data.
 
@@ -60,7 +60,7 @@ At the room:
 * System verifies signature + expiry
 * Door unlocks only if the token is valid
   
-## 🚀 Setup
+## Setup
 
 ### 1. Install `uv`
 ---
@@ -98,7 +98,7 @@ CHECKIN_SECRET=...
 
 ---
 
-## ▶️ Run Services
+## Run Services
 
 Run each service in separate terminals:
 
